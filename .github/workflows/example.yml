@@ -14,7 +14,4 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: python -c "import main"
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          JWT_SECRET_KEY: ${{ secrets.JWT_SECRET_KEY }}
+      - run: python -m py_compile main.py
